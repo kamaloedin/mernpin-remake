@@ -8,17 +8,17 @@
 .search {
   flex: 1;
   background-color: #f1f1f1;
-  border-radius: 16px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px;
+  padding: 12px;
 }
 
 .search input {
   flex: 1;
   background-color: transparent;
-  font-size: 18px;
+  font-size: 14px;
   border: none;
   outline: none;
 }

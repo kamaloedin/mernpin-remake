@@ -19,19 +19,24 @@
 }
 
 .menuIcon {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-}
-
-.menuIcon:hover {
-  background-color: #f1f1f1;
+  border-radius: 8px;
 }
 
 .logo {
   width: 24px;
   height: 24px;
+}
+
+.menuIcon img {
+  width: 20px;
+  height: 20px;
+}
+
+.menuIcon:hover {
+  background-color: #f1f1f1;
 }
