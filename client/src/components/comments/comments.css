@@ -68,3 +68,9 @@
   font-size: 18px;
   position: relative;
 }
+
+.emojiPicker {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+}
