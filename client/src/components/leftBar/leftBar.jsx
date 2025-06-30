@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import IKImage from '../image/image';
 import './leftBar.css';
 
@@ -5,25 +6,25 @@ const LeftBar = () => {
   return (
     <div className="leftBar">
       <div className="menuIcons">
-        <a href="/" className="menuIcon">
+        <Link to="/" className="menuIcon">
           <IKImage src="/general/logo.png" alt="" className="logo" />
-        </a>
-        <a href="/" className="menuIcon">
+        </Link>
+        <Link to="/" className="menuIcon">
           <IKImage src="/general/home.svg" alt="" />
-        </a>
-        <a href="/" className="menuIcon">
+        </Link>
+        <Link to="/create" className="menuIcon">
           <IKImage src="/general/create.svg" alt="" />
-        </a>
-        <a href="/" className="menuIcon">
+        </Link>
+        <Link to="/" className="menuIcon">
           <IKImage src="/general/updates.svg" alt="" />
-        </a>
-        <a href="/" className="menuIcon">
+        </Link>
+        <Link to="/" className="menuIcon">
           <IKImage src="/general/messages.svg" alt="" />
-        </a>
+        </Link>
       </div>
-      <a href="/" className="menuIcon">
+      <Link to="/" className="menuIcon">
         <IKImage src="/general/settings.svg" alt="" />
-      </a>
+      </Link>
     </div>
   );
 };
