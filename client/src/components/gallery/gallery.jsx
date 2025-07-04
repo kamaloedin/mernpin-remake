@@ -4,16 +4,18 @@ import GalleryItem from '../galleryItem/galleryItem';
 import './gallery.css';
 import axios from 'axios';
 
-const fetchPins = async ({ pageParam }) => {
-  const res = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/pins?cursor=${pageParam}`);
+const fetchPins = async ({ pageParam, search }) => {
+  const res = await axios.get(
+    `${import.meta.env.VITE_API_ENDPOINT}/pins?cursor=${pageParam}&search=${search || ''}`,
+  );
 
   return res.data;
 };
 
-const Gallery = () => {
+const Gallery = ({ search }) => {
   const { data, fetchNextPage, hasNextPage, status } = useInfiniteQuery({
-    queryKey: ['pins'],
-    queryFn: fetchPins,
+    queryKey: ['pins', 'search'],
+    queryFn: ({ pageParam = 0 }) => fetchPins({ pageParam, search }),
     initialPageParam: 0,
     getNextPageParam: (lastPage, pages) => lastPage.nextCursor,
   });
